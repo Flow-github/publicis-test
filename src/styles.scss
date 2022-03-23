@@ -2,3 +2,13 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+
+html, body{
+    width:100% !important;
+    height: 100% !important;
+    background-color: #FFFFFF !important;
+    font-family: "Quicksand, Impact, Franklin Gothic Bold, sans-serif" !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
