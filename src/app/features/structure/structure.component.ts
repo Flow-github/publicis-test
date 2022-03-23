@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './structure.component.html',
   styleUrls: ['./structure.component.scss']
 })
-export class StructureComponent {
-  title = 'publicis-test';
-}
+export class StructureComponent {}
