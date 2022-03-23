@@ -1,0 +1,27 @@
+div[root-main-header]{
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin: 3.125rem 0;
+
+    > div{
+        margin: 0 auto;
+        padding: 0 0 1rem 0;
+
+        &::before{
+            content: "";
+            width: 50%;
+            height: 0.0625rem;
+            background-color: #000000;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+        }
+
+        > h1{
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
