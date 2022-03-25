@@ -1,33 +1,40 @@
 <div root-main-menu>
-    <div>
-        <ul>
-            <li *ngFor="let menuInterface of listMenuInterface" class="{{ menuInterface.class }} toto">
-                <div class="separator separator-left">
-                    <div></div>
-                    <div>
-                        <svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 2 1'>
-                            <g>
-                                <path class="path-svg" d='M2.1,0 l1,1 l-2.8,0 z'></path>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-                <div>
-                    <a [routerLink]="menuInterface.link">
-                        <p>{{ menuInterface.label }}</p>
-                    </a>
-                </div>
-                <div class="separator separator-right">
-                    <div></div>
-                    <div>
-                        <svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 2 1'>
-                            <g>
-                                <path class="path-svg" d='M-0.2,0 l0,1 l1.8,0 z'></path>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul>
+                    <li *ngFor="let menuInterface of listMenuInterface" class="{{ menuInterface.class }} toto">
+                        <div class="separator separator-left">
+                            <div></div>
+                            <div>
+                                <svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 2 1'>
+                                    <g>
+                                        <path class="path-svg" d='M2.1,0 l1,1 l-2.8,0 z'></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <a [routerLink]="menuInterface.link">
+                                <p>{{ menuInterface.label }}</p>
+                            </a>
+                        </div>
+                        <div class="separator separator-right">
+                            <div></div>
+                            <div>
+                                <svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 2 1'>
+                                    <g>
+                                        <path class="path-svg" d='M-0.2,0 l0,1 l1.8,0 z'></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </div>
