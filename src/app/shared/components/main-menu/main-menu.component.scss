@@ -128,6 +128,96 @@ div[root-main-menu]{
                         margin: 0 0 0 auto;
                     }
                 }
+
+                @media (max-width: 768px) {
+                    > ul{
+                        display: flex;
+                        flex-direction: column;
+                        border-bottom: none;
+            
+                        > li{
+                            display: inline-flex;
+                            margin: 0 auto;
+            
+                            > div{
+            
+                                > a{
+            
+                                    > p{
+                                        font-size: 1.125rem;
+                                        letter-spacing: 0.025rem;
+                                        color: #000000;
+                                        margin: 0;
+                                        padding: 0.5rem 1.5625rem;
+                                        white-space: nowrap;
+                                    }
+                                }
+                            }
+            
+                            > .separator{
+                                width: 0rem;
+                                padding: 0;
+            
+                                > div{
+                                    width: 100%;
+                                    height: 100%;
+                                    position: relative;
+                                }
+            
+                                > div:first-of-type{
+                                    opacity: 0;
+                                    box-shadow: none;
+                                }
+                            }
+            
+                            > .separator-left{
+                                padding-left: 0;
+            
+                                > div:first-of-type{
+                                    transform: rotate(0deg);
+                                }
+                            }
+            
+                            > .separator-right{
+                                padding-right: 0rem;
+            
+                                > div:first-of-type{
+                                    left: 0rem;
+                                    transform: rotate(0deg);
+                                }
+                            }
+                        }
+            
+                        > .current-link{
+            
+                            > div{
+            
+                                > a{
+            
+                                    > p{
+                                        border-radius: 0.5625rem;
+                                    }
+                                }
+                            }
+            
+                            > .separator{
+                                opacity: 0;
+                            }
+                        }
+            
+                        > .hide-tab{
+                            display: none;
+                        }
+            
+                        > li:first-of-type{
+                            margin: 0;
+                        }
+            
+                        > li:last-of-type{
+                            margin: 0;
+                        }
+                    }
+                }
             }
         }
     }
