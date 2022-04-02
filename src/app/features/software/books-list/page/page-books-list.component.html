@@ -1,1 +1,7 @@
-<p>page-books-list works!</p>
+<div root-page-books-list class='container'>
+    <div class='row'>
+        <div *ngFor="let dataBook of listBooks" class='col-sm-12 col-md-6 col-lg-4 col-xl-3'>
+            <app-book-tile [bookData]="dataBook"></app-book-tile>
+        </div>
+    </div>
+</div>
