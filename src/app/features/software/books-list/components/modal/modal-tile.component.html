@@ -1,0 +1,26 @@
+<div class="container-fluid" root-modal-tile>
+    <div class="row header-modal">
+        <div class="col-12">
+            <div #closeButton class="close-button" tabindex="0" role="button"><p>&times;</p></div>
+        </div>
+    </div>
+    <div class="row body-modal">
+        <div class="col-3">
+            <img src="{{ cover }}" alt="{{ title }}" />
+        </div>
+        <div class="col-9">
+            <div>
+                <h1>{{ title }}</h1>
+            </div>
+            <div>
+                <p>{{ synopsis }}</p>
+            </div>
+            <div>
+                <p class="price">Prix: {{ price }} G</p>
+            </div>
+            <div>
+                <button>Mettre dans le panier</button>
+            </div>
+        </div>
+    </div>
+</div>

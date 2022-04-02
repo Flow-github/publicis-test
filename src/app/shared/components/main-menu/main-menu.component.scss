@@ -1,9 +1,11 @@
+@import 'src/assets/scss/variables';
+
 div[root-main-menu]{
     width: 100%;
     display: flex;
 
     > nav{
-        background-color: #FFFFFF !important;
+        background-color: $color-white !important;
 
         > div{
 
@@ -16,8 +18,8 @@ div[root-main-menu]{
                     list-style: none;
                     margin: 0;
                     padding: 0;
-                    background-color: #FFFFFF;
-                    border-bottom: 0.125rem solid #000000;
+                    background-color: $color-white;
+                    border-bottom: 0.125rem solid $color-black;
                     border-top-left-radius: 0.3125rem;
                     border-top-right-radius: 0.3125rem;
         
@@ -33,7 +35,7 @@ div[root-main-menu]{
                                 > p{
                                     font-size: 1.125rem;
                                     letter-spacing: 0.025rem;
-                                    color: #000000;
+                                    color: $color-black;
                                     margin: 0;
                                     padding: 0.5rem 1.5625rem;
                                     white-space: nowrap;
@@ -63,7 +65,7 @@ div[root-main-menu]{
                                     > g{
         
                                         > .path-svg{
-                                            fill:#000000;
+                                            fill:$color-black;
                                         }
                                     }
                                 }
@@ -72,7 +74,7 @@ div[root-main-menu]{
                             > div:first-of-type{
                                 position: absolute;
                                 opacity: 0.2;
-                                box-shadow: -0.125rem 0px 7.5rem -6.875rem #000000 inset;
+                                box-shadow: -0.125rem 0px 7.5rem -6.875rem $color-black inset;
                             }
                         }
         
@@ -103,10 +105,10 @@ div[root-main-menu]{
                                 > p{
                                     font-weight: bold;
                                     letter-spacing: 0.035rem;
-                                    color: #FFFFFF;
-                                    background-color: #000000;
+                                    color: $color-white;
+                                    background-color: $color-black;
                                     border-radius: 0.5625rem 0.5625rem 0 0;
-                                    box-shadow: 0 0.25rem 0.875rem -0.25rem #000000;
+                                    box-shadow: 0 0.25rem 0.875rem -0.25rem $color-black;
                                 }
                             }
                         }
@@ -146,7 +148,7 @@ div[root-main-menu]{
                                     > p{
                                         font-size: 1.125rem;
                                         letter-spacing: 0.025rem;
-                                        color: #000000;
+                                        color: $color-black;
                                         margin: 0;
                                         padding: 0.5rem 1.5625rem;
                                         white-space: nowrap;

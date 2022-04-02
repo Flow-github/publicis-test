@@ -1,0 +1,24 @@
+@import "src/assets/scss/variables";
+
+@mixin styleHeaderModal(){
+  .header-modal{
+    margin: 6px 8px;
+
+    > div{
+
+      > .close-button{
+        width: fit-content;
+        margin: 0 0 0 auto;
+        cursor: pointer;
+
+        > p{
+          user-select: none;
+          font-size: 2rem;
+          font-weight: bold;
+          color: $color-black;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

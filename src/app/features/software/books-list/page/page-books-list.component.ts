@@ -1,7 +1,10 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component } from '@angular/core';
 import { BookInterface } from 'src/app/models/book.interface';
+import { ModalManagerService } from 'src/app/shared/components/modal/service/modal-manager.service';
+import { AbstractPage } from 'src/app/shared/components/page/abstract-page.component';
 import { BooksService } from 'src/app/shared/services/books.service';
+import { RequestErrorService } from 'src/app/shared/services/request-error.service';
+import { ModalTileComponent } from '../components/modal/modal-tile.component';
 import { EventsMouse } from '../services-events/events-mouse.service';
 
 @Component({
@@ -9,27 +12,24 @@ import { EventsMouse } from '../services-events/events-mouse.service';
   templateUrl: './page-books-list.component.html',
   styleUrls: ['./page-books-list.component.scss']
 })
-export class PageBooksListComponent implements OnInit, OnDestroy {
+export class PageBooksListComponent extends AbstractPage {
 
-  private _globalSubscription:Subscription;
   private _listBooks:Array<BookInterface>;
 
   public get listBooks():Array<BookInterface>{
     return this._listBooks;
   }
 
-  public constructor(private _booksService:BooksService, private _eventsMouseService:EventsMouse) {
-    this._globalSubscription = new Subscription();
+  public constructor(private _booksService:BooksService, private _eventsMouseService:EventsMouse, modalManager:ModalManagerService, requestErrorService:RequestErrorService) {
+    super(modalManager, requestErrorService);
     this._listBooks = [];
   }
 
-  public ngOnInit(): void {
+  public override ngOnInit(): void {
+    super.ngOnInit();
+
     this._globalSubscription.add(this._booksService.booksList$.subscribe((listBooks:Array<BookInterface>) => {this.onListBooksLoaded(listBooks)}));
     this._globalSubscription.add(this._eventsMouseService.selectTile.subscribe((book:BookInterface) => {this.onOpenTile(book)}));
-  }
-
-  public ngOnDestroy(): void {
-    this._globalSubscription.unsubscribe();
   }
 
   private onListBooksLoaded(listBooks:Array<BookInterface>):void{
@@ -43,6 +43,8 @@ export class PageBooksListComponent implements OnInit, OnDestroy {
   private onOpenTile(book:BookInterface):void{
     console.log("onOpenTile");
     console.log(book);
+
+    this._modalManager.openModal(ModalTileComponent, {windowClass: "", size:"lg"}, book);
   }
 
 }

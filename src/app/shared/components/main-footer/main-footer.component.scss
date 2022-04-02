@@ -1,7 +1,9 @@
+@import 'src/assets/scss/variables';
+
 div[root-main-footer]{
     width: 100%;
     display: flex;
-    background-color: #000000;
+    background-color: $color-black;
 
     > div{
         margin: 1rem 1rem 1rem auto;
@@ -9,7 +11,7 @@ div[root-main-footer]{
         > p{
             font-size: 0.75rem;
             letter-spacing: 0.0125rem;
-            color: #FFFFFF;
+            color: $color-white;
             margin: 0;
         }
     }

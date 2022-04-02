@@ -1,0 +1,20 @@
+@import 'src/assets/scss/mixins';
+
+div[root-modal-error]{
+
+    @include styleHeaderModal();
+
+    > .body-modal{
+        margin: 6px 8px;
+
+        > div{
+
+            > div{
+
+                > p{
+                    overflow-wrap: break-word;
+                }
+            }
+        }
+    }
+}

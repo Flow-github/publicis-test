@@ -1,3 +1,5 @@
+@import 'src/assets/scss/variables';
+
 div[root-main-header]{
     display: flex;
     position: relative;
@@ -12,7 +14,7 @@ div[root-main-header]{
             content: "";
             width: 50%;
             height: 0.0625rem;
-            background-color: #000000;
+            background-color: $color-black;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
