@@ -1,20 +1,26 @@
 <div root-structure>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-12">
-        <div>
-          <header>
+  <div>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
             <app-main-header></app-main-header>
             <app-main-menu></app-main-menu>
-          </header>
-          <section>
-            <router-outlet></router-outlet>
-          </section>
-          <footer>
-            <app-main-footer></app-main-footer>
-          </footer>
+          </div>
         </div>
       </div>
-    </div>
+    </header>
+    <section>
+      <router-outlet></router-outlet>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <app-main-footer></app-main-footer>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </div>
