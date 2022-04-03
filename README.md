@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Installation
 
-Run `git clone https://github.com/Flow-github/publicis-test.git` for checkout lovaly the project.
+Run `git clone https://github.com/Flow-github/publicis-test.git` for checkout localy the project.
 Run `npm install` for install library of the project.
 
 ## Development server
