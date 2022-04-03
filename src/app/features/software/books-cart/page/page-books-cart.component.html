@@ -1,1 +1,20 @@
-<p>page-books-cart works!</p>
+<div root-page-cart class='container'>
+    <ng-template [ngIf]="isWithBookCarted" [ngIfElse]="noBook">
+        <div class='row'>
+            <p>Récapitulatif de votre panier:</p>
+        </div>
+        <div class='row'>
+            <div *ngFor="let dataBook of listBooksCarted">
+                <app-recap-book [bookData]="dataBook"></app-recap-book>
+            </div>
+        </div>
+        <div class='row'>
+            <app-best-offer [offer]="bestOffer"></app-best-offer>
+        </div>
+    </ng-template>
+    <ng-template #noBook>
+        <div class='row'>
+            <p>Votre panier est vide !</p>
+        </div>
+    </ng-template>
+</div>

@@ -1,0 +1,35 @@
+@import 'src/assets/scss/variables';
+
+div[root-best-offer]{
+
+    > div{
+        border: 0.0625rem solid $color-black;
+        border-radius: 0.325rem;
+        width: 100%;
+        margin: 0 0 1.5rem 0;
+        padding: 1rem 2rem;
+
+        > div{
+            margin: 0 2rem 0 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            > p{
+                font-size: 1.25rem;
+                letter-spacing: 0.0325rem;
+                text-decoration: underline;
+            }
+
+            > div{
+                margin: 0 auto;
+
+                > p{
+                    font-size: 1rem;
+                    letter-spacing: 0.0325rem;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

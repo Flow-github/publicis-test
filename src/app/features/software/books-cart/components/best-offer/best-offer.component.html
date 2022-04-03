@@ -1,0 +1,20 @@
+<div root-best-offer>
+    <ng-template [ngIf]="offer">
+    <div>
+        <div>
+            <p>Voici la meilleur remise que nous vous proposons pour ce panier:</p>
+        </div>
+        <div>
+            <div>
+                <p>Remise de type: {{ type }}</p>
+            </div>
+            <div>
+                <p>Détail: {{ totalPrice }}G - {{ offerValue }}G</p>
+            </div>
+            <div>
+                <p>Total: {{ priceAfterOffer }}G</p>
+            </div>
+        </div>
+    </div>
+    </ng-template>
+</div>
