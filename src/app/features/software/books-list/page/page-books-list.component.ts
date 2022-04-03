@@ -41,9 +41,6 @@ export class PageBooksListComponent extends AbstractPage {
   }
 
   private onOpenTile(book:BookInterface):void{
-    console.log("onOpenTile");
-    console.log(book);
-
     this._modalManager.openModal(ModalTileComponent, {windowClass: "", size:"lg"}, book);
   }
 

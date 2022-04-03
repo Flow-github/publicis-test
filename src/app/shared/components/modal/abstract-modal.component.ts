@@ -9,12 +9,11 @@ export class AbstractModal implements OnInit, OnDestroy{
     @ViewChild("closeButton", {static: true}) closeButton!:ElementRef;
 
     public inputDataModal:any;
-    public emitCloseEvent:EventEmitter<unknown>;
 
     private _unsubscribeCloseModal!:Function;
 
     constructor(protected _activeModal: NgbActiveModal, protected _renderer:Renderer2){
-        this.emitCloseEvent = new EventEmitter<unknown>();
+        
     }
 
     public ngOnInit(): void {
@@ -27,7 +26,6 @@ export class AbstractModal implements OnInit, OnDestroy{
 
     public closeModal():void{
         this._activeModal.close();
-        this.emitCloseEvent.emit();
     }
     
     private onCloseModal(e:MouseEvent):void{
