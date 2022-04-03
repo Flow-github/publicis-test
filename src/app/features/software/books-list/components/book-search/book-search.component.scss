@@ -1,0 +1,33 @@
+@import 'src/assets/scss/variables';
+
+div[root-book-search]{
+    margin: 1rem 0 0 0;
+
+    > div{
+        
+        > form{
+            display: flex;
+
+            > div{
+
+                > input{
+                    border-radius: 0.375rem 0 0 0.375rem;
+                    padding: 0.25rem 0.375rem;
+                    border-color: $color-grey;
+                    border-style: solid;
+                    border-width: 0.0625rem;
+                    border-right: none;
+                }
+
+                > button{
+                    border-radius: 0 0.375rem 0.375rem 0;
+                    padding: 0.25rem 0.375rem;
+                    border-color: $color-grey;
+                    border-style: solid;
+                    border-width: 0.0625rem;
+                    border-left: none;
+                }
+            }
+        }
+    }
+}

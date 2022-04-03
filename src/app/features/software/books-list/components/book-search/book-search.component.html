@@ -1,0 +1,12 @@
+<div root-book-search>
+    <div>
+        <form [formGroup]="searchForm">
+            <div>
+                <input type="text" placeholder="recherche" [formControlName]="formControlName"/>
+            </div>
+            <div>
+                <button #submitFormButton tabindex="0">Chercher</button>
+            </div>
+        </form>
+    </div>
+</div>
