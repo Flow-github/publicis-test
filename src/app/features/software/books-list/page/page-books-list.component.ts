@@ -28,13 +28,23 @@ export class PageBooksListComponent extends AbstractPage {
   public override ngOnInit(): void {
     super.ngOnInit();
 
+    this._globalSubscription.add(this._booksService.booksListFiltred$.subscribe((listBooks:Array<BookInterface>) => {this.onListBooksFiltred(listBooks)}));
+    this._globalSubscription.add(this._booksService.paramSearchBooks$.subscribe((paramSearch:string) => {this.onSearchBooks(paramSearch)}));
     this._globalSubscription.add(this._booksService.booksList$.subscribe((listBooks:Array<BookInterface>) => {this.onListBooksLoaded(listBooks)}));
     this._globalSubscription.add(this._eventsMouseService.selectTile.subscribe((book:BookInterface) => {this.onOpenTile(book)}));
   }
 
+  private onListBooksFiltred(listBooks:Array<BookInterface>):void{
+    this._listBooks = listBooks;
+  }
+
+  private onSearchBooks(paramSearch:string):void{
+    this._booksService.filterListBooks(paramSearch);
+  }
+
   private onListBooksLoaded(listBooks:Array<BookInterface>):void{
     if(listBooks.length > 0){
-      this._listBooks = listBooks;
+      this._booksService.filterListBooks(this._booksService.currentParamSearch);
     }else{
       this._booksService.getAllBooksList();
     }
